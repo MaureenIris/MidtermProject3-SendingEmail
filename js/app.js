@@ -59,6 +59,8 @@ function sendEmail(e) {
             sendEmailImg.remove();
         }, 5000);
     }, 3000 );
+
+        sendBtn.disabled = true;
 }
 
 //Validate the fields
