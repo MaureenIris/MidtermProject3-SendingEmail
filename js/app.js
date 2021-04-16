@@ -60,6 +60,7 @@ function sendEmail(e) {
         }, 5000);
     }, 3000 );
 
+
         sendBtn.disabled = true;
 }
 
@@ -103,6 +104,20 @@ function validateEmail(field) {
     let emailText = field.value;
     //check if the emailText contains the @ sign
     if(emailText.indexOf('@') !== -1) {
+        field.style.borderBottomColor='green';
+        field.classList.remove('error');
+    }else {
+        field.style.borderBottomColor='red';
+        field.classList.add('error');
+    }
+    
+}
+
+//Validate email (checks for .com in the value)
+function validateEmail(field) {
+    let emailText = field.value;
+    //check if the emailText contains the .com 
+    if(emailText.indexOf('.com') !== -1) {
         field.style.borderBottomColor='green';
         field.classList.remove('error');
     }else {
