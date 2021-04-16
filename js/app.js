@@ -128,6 +128,11 @@ function validateEmail(field) {
 }
 
 //Reset the form
-function resetForm() {
-    sendEmailForm.reset();
+function resetForm(e) {
+    e.preventDefault();
+    
+        sendEmailForm.reset();
+
+        //disable the send button on load
+        sendBtn.disabled = true;
 }
